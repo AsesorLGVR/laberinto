@@ -1,0 +1,40 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="$7^?_[+hn.Dmg#LSi|^0">mySprite</variable><variable type="KIND_SpriteKind" id="qCM_n*1u/1u~M^^WUau|">Player</variable><variable type="KIND_SpriteKind" id="JuF((%t.%WW`hqF]2bu^">Projectile</variable><variable type="KIND_SpriteKind" id="^W8KZ`[nZ:2%wq6c!L/f">Food</variable><variable type="KIND_SpriteKind" id="D9!N;]e7`VLZ6+r*nH{[">Enemy</variable><variable type="BLOCKLY_TILESET_TYPE" id="eUgefE71*4t]2g-`-|IY">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="$7^?_[+hn.Dmg#LSi|^0">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . f f f f f f f f . . 
+. . f f f f f f f f . . 
+. . f f f e e f f f . . 
+. . 1 1 1 1 1 1 1 1 . . 
+. . f e 1 1 1 1 e f . . 
+. f e e e e e e e e f . 
+. e e f e e e e f e e . 
+. e e f e e e e f e e . 
+. e e e e e e e e e e . 
+. . e e e a a e e e . . 
+. . . e e e e e e . . . 
+1 1 1 1 1 e e 1 1 1 1 1 
+1 . . 1 1 1 1 1 1 . . 1 
+1 e . e e e e e e . e 1 
+. . . 1 1 1 1 1 1 . . . 
+. . f 1 f . . f 1 f . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="$7^?_[+hn.Dmg#LSi|^0">mySprite</field></block></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">100</field></shadow></value><next><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`100010000d100f0211191002021a0c0e010d0a0612051411041914020202020210020501220211041402020202020211040211080110051402021110020f110404191901011402020f0205041c05040414020f0f230f0211040419140211140502021b2212041705140202021104191002020508020302020f02020205041904011002230902021104100202111402050104200d10111005040401100510111a02031107041405101b14110410051502021b040704101104140504040417041a0f110407141b04140f0205140510051c040404010d04041c14021a1c1c041a11100504011a14030202020f1f101b1403030f030d0b070701010c1402051402020205220b`,
+            img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.floorLight1,sprites.dungeon.floorDark3,sprites.dungeon.stairEast,sprites.dungeon.stairLarge,sprites.dungeon.stairNorth,sprites.dungeon.greenSwitchDown,sprites.dungeon.doorClosedNorth,sprites.builtin.forestTiles16,sprites.builtin.crowd5,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.builtin.crowd9,sprites.dungeon.hazardSpike,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.saplingOak,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.castle.rock1,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,sprites.builtin.crowd1,sprites.builtin.crowd0,sprites.dungeon.buttonTeal,sprites.dungeon.hazardWater,sprites.dungeon.hazardHole,sprites.dungeon.chestClosed,sprites.dungeon.purpleSwitchDown],
+            TileScale.Sixteen
+        )</field><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id="$7^?_[+hn.Dmg#LSi|^0">mySprite</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.dungeon.stairNorth</field></shadow></value><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id="$7^?_[+hn.Dmg#LSi|^0">mySprite</field></block></value><next><block type="gamecountdown"><value name="duration"><shadow type="math_number"><field name="NUM">180</field></shadow></value><next><block type="playMelody"><value name="melody"><shadow type="melody_editor"><field name="melody">"E D G F B A C5 B "</field></shadow></value><value name="tempo"><shadow type="math_number_minmax"><mutation min="40" max="500" label="Tempo" precision="0"/><field name="SLIDER">120</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spriteshittile" x="30" y="510"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.dungeon.stairLarge</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><shadow type="argument_reporter_custom"><mutation typename="tiles.Location"/><field name="VALUE">location</field></shadow></value><statement name="HANDLER"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><field name="effect">effects.hearts</field><value name="win"><shadow type="toggleWinLose"><field name="win">true</field></shadow></value></block></statement></block></xml>
