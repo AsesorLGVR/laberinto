@@ -172,27 +172,27 @@ e e e e e e e e e e e e e e e e
 `
 }
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
-    mySprite.say("Ya era hora. Ahora ve echando leches hacia la puerta.", 500)
+    mySprite.say("va a ser que no", 5000)
     music.wawawawaa.play()
     info.changeLifeBy(-2)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
-    mySprite.say("Ya era hora. Ahora ve echando leches hacia la puerta.", 500)
+    mySprite.say("Bien, ya tienes la segunda terminación", 5000)
     info.changeLifeBy(2)
     music.powerUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
-    mySprite.say("Ya era hora. Ahora ve echando leches hacia la puerta.", 500)
+    mySprite.say("ole, mira, oye, asa!", 5000)
     info.changeLifeBy(1)
     music.powerUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
-    mySprite.startEffect(effects.spray, 1000)
+    mySprite.say("¡Fíjate mejor!", 5000)
     info.changeLifeBy(-2)
     music.wawawawaa.play()
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location) {
-    mySprite.say("Ya era hora. Ahora ve echando leches hacia la puerta.", 500)
+    mySprite.say("Ya era hora. Ahora ve echando leches hacia la puerta.", 5000)
     info.changeLifeBy(3)
     music.powerUp.play()
 })
@@ -218,7 +218,7 @@ mySprite = sprites.create(img`
 . . . 1 1 1 1 1 1 . . . 
 . . f 1 f . . f 1 f . . 
 `, SpriteKind.Player)
-mySprite.say("¡Vamo al lío!", 1000)
+mySprite.say("¡Vamo al lío!", 5000)
 controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tiles.createTilemap(
             hex`17000c001002020f020202110101010101010128010123012a010104222c04010101040110020f021101172e020322172b2a1402020302110115021b1c0401040104010101010401041a01010101041c041c15020501040115020f02171b0104010101100205010401220104010401180104010104010410020205010101041c1b011531300104011502021b010404010101011002050115021b01040104010401010401041f100f020f051c010104010401040115021b15021b01041922040104010110020501150205010401040101040104100203020302021b01010104310101040104010103021b04191919191919041910021b2f10021b010401010f01041d020202020202051c1402030203312d02030202030205`,
