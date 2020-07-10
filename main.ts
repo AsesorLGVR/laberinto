@@ -75,19 +75,132 @@ e e e e e e e e e e e e e e e 5
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 `
+    //% blockIdentity=images._tile
+    export const tile4 = img`
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 2 2 2 2 2 2 2 2 2 2 2 7 
+7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
+7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
+7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
+7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
+7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
+2 2 2 7 2 7 7 7 7 2 7 7 7 7 2 7 
+2 2 2 7 2 2 2 2 2 2 2 2 2 2 2 7 
+7 7 7 7 2 2 7 7 2 2 7 7 2 2 7 7 
+7 7 7 7 2 2 7 7 2 2 7 7 2 2 7 7 
+7 7 7 7 2 2 7 7 2 2 7 7 7 2 2 7 
+7 7 7 7 2 2 7 7 2 2 7 7 7 7 2 2 
+7 7 7 7 2 2 7 7 2 2 7 7 7 7 2 2 
+7 7 7 7 2 2 7 7 2 2 7 7 7 7 2 2 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+`
+    //% blockIdentity=images._tile
+    export const tile5 = img`
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 8 8 8 8 8 8 8 8 3 3 
+3 3 3 3 3 3 8 8 3 3 3 3 3 8 3 3 
+3 3 3 3 3 3 8 8 3 3 3 3 3 8 3 3 
+3 3 3 3 3 3 8 8 3 3 3 3 3 8 3 3 
+8 8 8 8 8 3 8 8 3 3 3 3 3 8 3 3 
+8 8 8 8 8 3 8 8 8 8 8 8 8 8 3 3 
+8 8 8 8 8 3 8 8 8 8 8 8 8 8 3 3 
+3 3 3 3 3 3 8 8 8 8 8 3 3 3 3 3 
+3 3 3 3 3 3 8 8 3 8 8 3 3 3 3 3 
+3 3 3 3 3 3 8 8 3 8 8 8 3 3 3 3 
+3 3 3 3 3 3 8 8 3 3 8 8 3 3 3 3 
+3 3 3 3 3 3 8 8 3 3 3 8 8 8 3 3 
+3 3 3 3 3 3 8 8 3 3 3 8 8 8 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+`
+    //% blockIdentity=images._tile
+    export const tile6 = img`
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 4 4 4 4 9 4 4 4 4 4 4 9 
+9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
+9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
+9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
+9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
+9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
+4 4 4 9 4 4 4 4 9 4 4 4 4 4 4 9 
+4 4 4 9 4 4 4 4 9 4 4 4 4 4 4 9 
+9 9 9 9 4 9 9 9 9 4 4 4 4 9 9 9 
+9 9 9 9 4 9 9 9 9 4 9 4 4 9 9 9 
+9 9 9 9 4 9 9 9 9 4 9 9 4 4 9 9 
+9 9 9 9 4 9 9 9 9 4 9 9 9 4 4 9 
+9 9 9 9 4 4 4 4 9 4 9 9 9 4 4 9 
+9 9 9 9 4 4 4 4 9 4 9 9 9 4 4 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+`
+    //% blockIdentity=images._tile
+    export const tile7 = img`
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 6 6 6 e e e 6 e e e e e e e 6 
+6 6 6 6 e e e 6 e e 6 6 6 e e 6 
+6 6 6 6 6 6 6 6 e e 6 6 6 e e 6 
+6 6 6 6 e e e 6 e e 6 6 6 e e 6 
+6 6 6 6 e e e 6 e e 6 6 6 e e 6 
+6 6 6 6 e e e 6 e e 6 6 6 e e 6 
+e e e 6 e e e 6 e e e e e e e 6 
+e e e 6 e e e 6 e e e e e e e 6 
+6 6 6 6 e e e 6 e e 6 e e e 6 6 
+6 6 6 6 e e e 6 e e 6 6 e e 6 6 
+6 6 6 6 e e e 6 e e 6 6 e e e 6 
+6 6 6 6 e e e 6 e e 6 6 e e e 6 
+6 6 6 6 e e e 6 e e 6 6 6 e e 6 
+6 6 6 6 e e e 6 e e 6 6 6 e e 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+`
+    //% blockIdentity=images._tile
+    export const tile8 = img`
+e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e 
+e e e e b b e e b b b b b b b e 
+e e e e b b e e b b e e e e b e 
+e e e e b b e e b b e e e e b e 
+e e e e b b e e b b e e e e b e 
+e e e e b b e e b b e e e e b e 
+b b b e b b e e b b b b b b b e 
+b b b e b b e e b b b b b b b e 
+e e e e b b e e b b b b b e e e 
+e e e e b b e e b b e b b e e e 
+e e e e b b e e b b e e b b e e 
+e e e e b b b b b b e e b b e e 
+e e e e b b b b b b e e b b e e 
+e e e e b b b b b b e e b b e e 
+e e e e e e e e e e e e e e e e 
+`
 }
-scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd1, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
+    mySprite.startEffect(effects.spray, 1000)
+    music.wawawawaa.play()
+    info.changeLifeBy(-2)
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
+    mySprite.startEffect(effects.smiles, 1000)
+    info.changeLifeBy(2)
+    music.powerUp.play()
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
+    mySprite.startEffect(effects.smiles, 1000)
+    info.changeLifeBy(1)
+    music.powerUp.play()
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
+    mySprite.startEffect(effects.spray, 1000)
     info.changeLifeBy(-2)
     music.wawawawaa.play()
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
-    info.changeLifeBy(1)
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location) {
+    mySprite.startEffect(effects.smiles, 1000)
+    info.changeLifeBy(3)
     music.powerUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
     game.over(true, effects.hearts)
 })
-let mySprite = sprites.create(img`
+let mySprite: Sprite = null
+mySprite = sprites.create(img`
 . . f f f f f f f f . . 
 . . f f f f f f f f . . 
 . . f f f e e f f f . . 
@@ -107,7 +220,7 @@ let mySprite = sprites.create(img`
 `, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tiles.createTilemap(
-            hex`17000c001002020f020202110101010101010128010123012a0101041c2204010101040110020f0211011722020302172b2a1402020302110115021b1c0401040104010101010401041a01010101041c041c15020501040115020f02171b0104010101100205010401220104010401180104010104010410020205010101041c1b0115271d0104011502021b010404010101011002050115021b01040104010401010401041f100f020f051c010104010401040115021b15021b01041922040104010110020501150205010401040101040104100203020302021b01010104010101040104010103021b04191919191919041910021b2710021b010401010f01041d020202020202051c1402030203261d02030202030205`,
+            hex`17000c001002020f020202110101010101010128010123012a010104222c04010101040110020f021101172e020322172b2a1402020302110115021b1c0401040104010101010401041a01010101041c041c15020501040115020f02171b0104010101100205010401220104010401180104010104010410020205010101041c1b011531300104011502021b010404010101011002050115021b01040104010401010401041f100f020f051c010104010401040115021b15021b01041922040104010110020501150205010401040101040104100203020302021b01010104310101040104010103021b04191919191919041910021b2f10021b010401010f01041d020202020202051c1402030203312d02030202030205`,
             img`
 . . . . . . . . 2 2 2 2 2 2 2 2 2 2 . 2 . 2 2 
 . 2 . . 2 2 2 . 2 . . . . . 2 . . . . 2 . 2 2 
@@ -120,9 +233,9 @@ tiles.setTilemap(tiles.createTilemap(
 2 . . 2 . 2 2 . . . 2 . . . 2 . 2 . 2 2 . 2 . 
 . . . . . . . . 2 2 2 . 2 2 2 . 2 . 2 2 . . . 
 . 2 2 2 2 2 2 . 2 . . . . . . . 2 . 2 2 2 2 . 
-. . . . . . . . 2 . 2 . . . 2 . . . . . . . . 
+2 . . . . . . . 2 . 2 . . . 2 . . . . . . . . 
 `,
-            [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.floorLight1,sprites.dungeon.floorDark3,sprites.dungeon.stairEast,sprites.dungeon.stairLarge,sprites.dungeon.stairNorth,sprites.dungeon.greenSwitchDown,sprites.dungeon.doorClosedNorth,sprites.builtin.forestTiles16,sprites.builtin.crowd5,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.builtin.crowd9,sprites.dungeon.hazardSpike,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.saplingOak,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.castle.rock1,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,sprites.builtin.crowd1,sprites.builtin.crowd0,sprites.dungeon.buttonTeal,sprites.dungeon.hazardWater,sprites.dungeon.hazardHole,sprites.dungeon.chestClosed,sprites.dungeon.purpleSwitchDown,myTiles.tile1,sprites.dungeon.stairLadder,sprites.builtin.forestTiles0,sprites.dungeon.chestOpen,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,myTiles.tile2,myTiles.tile3],
+            [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.floorLight1,sprites.dungeon.floorDark3,sprites.dungeon.stairEast,sprites.dungeon.stairLarge,sprites.dungeon.stairNorth,sprites.dungeon.greenSwitchDown,sprites.dungeon.doorClosedNorth,sprites.builtin.forestTiles16,sprites.builtin.crowd5,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.builtin.crowd9,sprites.dungeon.hazardSpike,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.saplingOak,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.castle.rock1,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,sprites.builtin.crowd1,sprites.builtin.crowd0,sprites.dungeon.buttonTeal,sprites.dungeon.hazardWater,sprites.dungeon.hazardHole,sprites.dungeon.chestClosed,sprites.dungeon.purpleSwitchDown,myTiles.tile1,sprites.dungeon.stairLadder,sprites.builtin.forestTiles0,sprites.dungeon.chestOpen,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.builtin.crowd4],
             TileScale.Sixteen
         ))
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.buttonTeal)
