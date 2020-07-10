@@ -1,17 +1,16 @@
 {
-    "name": "Conjugator",
+    "name": "laberinto",
+    "files": [
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
+        "README.md",
+        "main.blocks",
+        "main.ts",
+        "test.ts",
+        "tsconfig.json"
+    ],
     "dependencies": {
         "device": "*"
     },
-    "description": "",
-    "files": [
-        "main.blocks",
-        "main.ts",
-        "README.md",
-        null
-    ],
-    "preferredEditor": "blocksprj",
-    "testFiles": [
-        "test.ts"
-    ]
+    "preferredEditor": "blocksprj"
 }
