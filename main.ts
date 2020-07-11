@@ -171,42 +171,54 @@ e e e e b b b b b b e e b b e e
 e e e e e e e e e e e e e e e e 
 `
 }
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock0, function (sprite, location) {
+    mySprite.say("Sobrevivir, pero supervivencia", 5000)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.purpleSwitchDown, function (sprite, location) {
+    mySprite.say("El chute que necesitaba", 5000)
+    mySprite.startEffect(effects.rings, 1000)
+    info.changeLifeBy(2)
+    music.powerUp.play()
+})
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
     mySprite.say("va a ser que no", 5000)
     mySprite.startEffect(effects.fire, 1000)
     music.wawawawaa.play()
-    info.changeLifeBy(-2)
+    info.changeLifeBy(-1)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
-    mySprite.say("Bien, ya tienes la segunda terminación", 5000)
+    mySprite.say("¡Ole! Ya tienes la segunda terminación", 5000)
     mySprite.startEffect(effects.smiles, 1000)
-    info.changeLifeBy(2)
-    music.powerUp.play()
+    music.baDing.play()
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     mySprite.say("¡Tirado!", 5000)
     mySprite.startEffect(effects.smiles, 1000)
-    info.changeLifeBy(1)
-    music.powerUp.play()
+    music.baDing.play()
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     mySprite.say("¡Fíjate mejor!", 5000)
     mySprite.startEffect(effects.fire, 1000)
-    info.changeLifeBy(-2)
+    info.changeLifeBy(-1)
     music.wawawawaa.play()
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingPine, function (sprite, location) {
+    mySprite.say("Los arbustos no te detendrán", 5000)
+})
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location) {
-    mySprite.say("Ya era hora. Ahora ve echando leches hacia la puerta.", 5000)
+    mySprite.say("Ya era hora. Ve echando leches hacia la puerta.", 5000)
     mySprite.startEffect(effects.smiles, 1000)
-    info.changeLifeBy(3)
-    music.powerUp.play()
+    music.baDing.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
+    mySprite.say("Busca la palanca. Es vida extra", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
     game.over(true, effects.hearts)
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
-. . f f f f f f f f . . 
+. . . . . . . . . . . . 
 . . f f f f f f f f . . 
 . . f f f e e f f f . . 
 . . 1 1 1 1 1 1 1 1 . . 
@@ -231,11 +243,11 @@ tiles.setTilemap(tiles.createTilemap(
 . . . . . . . . 2 2 2 2 2 2 2 2 2 2 . 2 . 2 2 
 . 2 . . 2 2 2 . 2 . . . . . 2 . . . . 2 . 2 2 
 . . . . . . 2 . . . 2 . 2 . 2 . 2 2 2 2 . 2 . 
-2 2 2 2 2 . 2 . 2 . . . 2 . 2 . . . . 2 . 2 . 
+. 2 2 2 2 . 2 . 2 . . . 2 . 2 . . . . 2 . 2 . 
 2 2 2 . . . 2 . 2 . 2 2 2 . 2 2 2 . 2 2 . 2 . 
 . . . . 2 2 2 . 2 2 2 . . . 2 . 2 . . . . 2 . 
 . 2 2 2 2 . . 2 2 . . . 2 . 2 . 2 . 2 2 . 2 . 
-. . . . . . 2 2 2 . 2 . 2 . 2 . . . 2 . . 2 . 
+. . . . . . . 2 2 . 2 . 2 . 2 . . . 2 . . 2 . 
 2 . 2 2 . 2 2 . . . 2 . . . 2 . 2 . 2 2 . 2 . 
 . . . . . . . . 2 2 2 . 2 2 2 . 2 . 2 2 . . . 
 . 2 2 2 2 2 2 . 2 . . . . . . . 2 . 2 2 2 2 . 
