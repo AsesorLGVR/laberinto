@@ -171,9 +171,6 @@ e e e e b b b b b b e e b b e e
 e e e e e e e e e e e e e e e e 
 `
 }
-scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock0, function (sprite, location) {
-    mySprite.say("Sobrevivir, pero supervivencia", 5000)
-})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.purpleSwitchDown, function (sprite, location) {
     mySprite.say("El chute que necesitaba", 5000)
     mySprite.startEffect(effects.rings, 1000)
@@ -195,6 +192,9 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
     mySprite.say("¡Tirado!", 5000)
     mySprite.startEffect(effects.smiles, 1000)
     music.baDing.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, location) {
+    mySprite.say("Sobrevivir, pero supervivencia", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     mySprite.say("¡Fíjate mejor!", 5000)
