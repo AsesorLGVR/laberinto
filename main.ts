@@ -182,7 +182,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location
     music.powerUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
-    mySprite.say("ole, mira, oye, asa!", 5000)
+    mySprite.say("¡Tirado!", 5000)
     info.changeLifeBy(1)
     music.powerUp.play()
 })
