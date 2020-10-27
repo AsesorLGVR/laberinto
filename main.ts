@@ -1,14 +1,24 @@
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
     game.over(true, effects.hearts)
 })
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile3, function (sprite, location) {
+    if (game.askForString("¿Cúal es el tercer día de la semana?", 6) == "martes") {
+        tiles.setTileAt(location, sprites.castle.rock2)
+        music.baDing.play()
+    } else {
+        game.over(false)
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, location) {
     mySprite.say("Sobrevivir, pero supervivencia", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
-    mySprite.say("¡Fíjate mejor!", 5000)
-    mySprite.startEffect(effects.fire, 1000)
-    info.changeLifeBy(-1)
-    music.wawawawaa.play()
+    if (game.askForString("¿Cúal es el quinto día de la semana?", 6) == "martes") {
+        tiles.setTileAt(location, sprites.castle.rock2)
+        music.baDing.play()
+    } else {
+        game.over(false)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingPine, function (sprite, location) {
     mySprite.say("Los arbustos no te detendrán", 5000)
@@ -17,20 +27,12 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd4, function (sprite,
     mySprite.say("¡Cuidado!", 5000)
     music.siren.play()
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile9, function (sprite, location) {
-    if (game.askForString("¿Cúal es el primer día de la semana?", 5) == "lunes") {
-        tiles.setTileAt(location, sprites.castle.rock2)
-        music.baDing.play()
-    } else {
-        game.over(false)
-    }
-})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     game.setDialogTextColor(8)
     game.showLongText("Sábado, sabadete, camisa blanca y polvete.", DialogLayout.Full)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location) {
-    if (game.askForString("¿Cúal es el segundo día de la semana?", 6) == "martes") {
+    if (game.askForString("¿Cúal es el sexto día de la semana?", 6) == "martes") {
         tiles.setTileAt(location, sprites.castle.rock2)
         music.baDing.play()
     } else {
@@ -38,14 +40,18 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location
     }
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
-    if (game.askForString("¿Cúal es el segundo día de la semana?", 6) == "martes") {
+    if (game.askForString("¿Cúal es el cuarto día de la semana?", 6) == "martes") {
         tiles.setTileAt(location, sprites.castle.rock2)
         music.baDing.play()
     } else {
-        game.over(false)
+        while (false) {
+            for (let index = 0; index < 4; index++) {
+                game.over(false)
+            }
+        }
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
     if (game.askForString("¿Cúal es el segundo día de la semana?", 6) == "martes") {
         tiles.setTileAt(location, sprites.castle.rock2)
         music.baDing.play()
@@ -54,10 +60,22 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite,
     }
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
-    mySprite.say("va a ser que no", 5000)
-    mySprite.startEffect(effects.fire, 1000)
-    music.wawawawaa.play()
-    info.changeLifeBy(-1)
+    if (game.askForString("¿Cúal es el séptimo día de la semana?", 6) == "martes") {
+        tiles.setTileAt(location, sprites.castle.rock2)
+        music.baDing.play()
+    } else {
+        game.over(false)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite, location) {
+    if (game.askForString("¿Cúal es el primer día de la semana?", 5) == "lunes") {
+        tiles.setTileAt(location, sprites.castle.rock2)
+        music.baDing.play()
+    } else {
+        while (false) {
+            game.over(false)
+        }
+    }
 })
 let mySprite: Sprite = null
 game.splash("¿Te sabes ", "los días de la semana? ")
@@ -94,7 +112,7 @@ tiles.setTilemap(tiles.createTilemap(hex`17000c000802020702020209010101010101011
     . . . 2 . . . . 2 2 2 . 2 2 2 . 2 . 2 2 . . . 
     . 2 2 2 2 2 2 . 2 . . . . . . . 2 . 2 2 2 2 . 
     . . . . . . . . 2 . . . . . 2 . . . . . . . . 
-    `, [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.stairLarge,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.castle.rock1,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,sprites.builtin.crowd1,sprites.dungeon.chestClosed,sprites.dungeon.purpleSwitchDown,sprites.dungeon.collectibleRedCrystal,myTiles.tile2,myTiles.tile3,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.builtin.crowd4,myTiles.transparency16], TileScale.Sixteen))
+    `, [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.stairLarge,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.castle.rock1,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,sprites.builtin.crowd1,sprites.dungeon.chestClosed,sprites.dungeon.purpleSwitchDown,sprites.dungeon.collectibleRedCrystal,myTiles.tile2,myTiles.tile3,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.builtin.crowd4,myTiles.transparency16,myTiles.tile9], TileScale.Sixteen))
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(180)
