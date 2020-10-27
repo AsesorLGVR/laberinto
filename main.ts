@@ -5,8 +5,12 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, l
     mySprite.say("Sobrevivir, pero supervivencia", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
-    game.showLongText(game.askForString("¿Cúal es el primer día de la semana?", 5), DialogLayout.Top)
-    tiles.setTileAt(location, sprites.castle.rock2)
+    game.splash(game.askForString("¿Cúal es el primer día de la semana?", 5))
+    if ("lunes" == "lunes") {
+        tiles.setTileAt(location, sprites.castle.rock2)
+    } else {
+        game.over(false)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     mySprite.say("¡Fíjate mejor!", 5000)
