@@ -1,5 +1,8 @@
 {
-    "name": "Conjugator ",
+    "name": "los-dias de-la-semana",
+    "dependencies": {
+        "device": "*"
+    },
     "files": [
         ".vscode/settings.json",
         ".vscode/tasks.json",
@@ -7,10 +10,16 @@
         "main.blocks",
         "main.ts",
         "test.ts",
-        "tsconfig.json"
+        "tsconfig.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
-    "dependencies": {
-        "device": "*"
+    "targetVersions": {
+        "target": "1.2.6",
+        "targetId": "arcade"
     },
+    "supportedTargets": [
+        "arcade"
+    ],
     "preferredEditor": "blocksprj"
 }

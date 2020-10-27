@@ -1,200 +1,12 @@
-namespace myTiles {
-    //% blockIdentity=images._tile
-    export const tile0 = img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`
-    //% blockIdentity=images._tile
-    export const tile1 = img`
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-e e e e e e e e e e e e e e e 5 
-e e e e e e f e e e e e e e e 5 
-e e e e e e e e e e e e e e e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e d d d d d d d e 5 
-e e e e e e e e e e e e e e e 5 
-e e e e e e e e e e e e e e e 5 
-e e e e e e e e e e e e e e e 5 
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-`
-    //% blockIdentity=images._tile
-    export const tile2 = img`
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e d d d d d d e e e 5 5 
-5 5 e e e d d d d d d e e e 5 5 
-5 5 e e e d d d d d d e e e 5 5 
-5 5 e e e d d d d d d e e e 5 5 
-5 5 e e e d d d d d d e e e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e e e e e e e e f e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-5 5 e e e e e e e e e e e e 5 5 
-`
-    //% blockIdentity=images._tile
-    export const tile3 = img`
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 1 1 1 1 1 1 f f 1 1 1 1 1 1 
-1 1 1 1 1 1 1 1 f f f 1 1 1 1 1 
-1 f f f f f f f f f f f 1 1 1 1 
-1 f f f f f f f f f f f f f 1 1 
-1 f f f f f f f f f f f f f f f 
-1 f f f f f f f f f f f f f f f 
-1 f f f f f f f f f f f f f 1 1 
-1 f f f f f f f f f f f 1 1 1 1 
-1 1 1 1 1 1 1 1 f f f 1 1 1 1 1 
-1 1 1 1 1 1 1 1 f f 1 1 1 1 1 1 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-`
-    //% blockIdentity=images._tile
-    export const tile4 = img`
-7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-7 7 7 7 2 2 2 2 2 2 2 2 2 2 2 7 
-7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
-7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
-7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
-7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
-7 7 7 7 2 7 7 7 7 2 7 7 7 7 2 7 
-2 2 2 7 2 7 7 7 7 2 7 7 7 7 2 7 
-2 2 2 7 2 2 2 2 2 2 2 2 2 2 2 7 
-7 7 7 7 2 2 7 7 2 2 7 7 2 2 7 7 
-7 7 7 7 2 2 7 7 2 2 7 7 2 2 7 7 
-7 7 7 7 2 2 7 7 2 2 7 7 7 2 2 7 
-7 7 7 7 2 2 7 7 2 2 7 7 7 7 2 2 
-7 7 7 7 2 2 7 7 2 2 7 7 7 7 2 2 
-7 7 7 7 2 2 7 7 2 2 7 7 7 7 2 2 
-7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-`
-    //% blockIdentity=images._tile
-    export const tile5 = img`
-3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 8 8 8 8 8 8 8 8 3 3 
-3 3 3 3 3 3 8 8 3 3 3 3 3 8 3 3 
-3 3 3 3 3 3 8 8 3 3 3 3 3 8 3 3 
-3 3 3 3 3 3 8 8 3 3 3 3 3 8 3 3 
-8 8 8 8 8 3 8 8 3 3 3 3 3 8 3 3 
-8 8 8 8 8 3 8 8 8 8 8 8 8 8 3 3 
-8 8 8 8 8 3 8 8 8 8 8 8 8 8 3 3 
-3 3 3 3 3 3 8 8 8 8 8 3 3 3 3 3 
-3 3 3 3 3 3 8 8 3 8 8 3 3 3 3 3 
-3 3 3 3 3 3 8 8 3 8 8 8 3 3 3 3 
-3 3 3 3 3 3 8 8 3 3 8 8 3 3 3 3 
-3 3 3 3 3 3 8 8 3 3 3 8 8 8 3 3 
-3 3 3 3 3 3 8 8 3 3 3 8 8 8 3 3 
-3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-`
-    //% blockIdentity=images._tile
-    export const tile6 = img`
-9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-9 9 9 9 4 4 4 4 9 4 4 4 4 4 4 9 
-9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
-9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
-9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
-9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
-9 9 9 9 4 9 9 9 9 4 9 9 9 9 4 9 
-4 4 4 9 4 4 4 4 9 4 4 4 4 4 4 9 
-4 4 4 9 4 4 4 4 9 4 4 4 4 4 4 9 
-9 9 9 9 4 9 9 9 9 4 4 4 4 9 9 9 
-9 9 9 9 4 9 9 9 9 4 9 4 4 9 9 9 
-9 9 9 9 4 9 9 9 9 4 9 9 4 4 9 9 
-9 9 9 9 4 9 9 9 9 4 9 9 9 4 4 9 
-9 9 9 9 4 4 4 4 9 4 9 9 9 4 4 9 
-9 9 9 9 4 4 4 4 9 4 9 9 9 4 4 9 
-9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
-`
-    //% blockIdentity=images._tile
-    export const tile7 = img`
-6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
-6 6 6 6 e e e 6 e e e e e e e 6 
-6 6 6 6 e e e 6 e e 6 6 6 e e 6 
-6 6 6 6 6 6 6 6 e e 6 6 6 e e 6 
-6 6 6 6 e e e 6 e e 6 6 6 e e 6 
-6 6 6 6 e e e 6 e e 6 6 6 e e 6 
-6 6 6 6 e e e 6 e e 6 6 6 e e 6 
-e e e 6 e e e 6 e e e e e e e 6 
-e e e 6 e e e 6 e e e e e e e 6 
-6 6 6 6 e e e 6 e e 6 e e e 6 6 
-6 6 6 6 e e e 6 e e 6 6 e e 6 6 
-6 6 6 6 e e e 6 e e 6 6 e e e 6 
-6 6 6 6 e e e 6 e e 6 6 e e e 6 
-6 6 6 6 e e e 6 e e 6 6 6 e e 6 
-6 6 6 6 e e e 6 e e 6 6 6 e e 6 
-6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
-`
-    //% blockIdentity=images._tile
-    export const tile8 = img`
-e e e e e e e e e e e e e e e e 
-e e e e e e e e e e e e e e e e 
-e e e e b b e e b b b b b b b e 
-e e e e b b e e b b e e e e b e 
-e e e e b b e e b b e e e e b e 
-e e e e b b e e b b e e e e b e 
-e e e e b b e e b b e e e e b e 
-b b b e b b e e b b b b b b b e 
-b b b e b b e e b b b b b b b e 
-e e e e b b e e b b b b b e e e 
-e e e e b b e e b b e b b e e e 
-e e e e b b e e b b e e b b e e 
-e e e e b b b b b b e e b b e e 
-e e e e b b b b b b e e b b e e 
-e e e e b b b b b b e e b b e e 
-e e e e e e e e e e e e e e e e 
-`
-}
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.purpleSwitchDown, function (sprite, location) {
-    mySprite.say("El chute que necesitaba", 5000)
-    mySprite.startEffect(effects.rings, 1000)
-    info.changeLifeBy(2)
-    music.powerUp.play()
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
-    mySprite.say("va a ser que no", 5000)
-    mySprite.startEffect(effects.fire, 1000)
-    music.wawawawaa.play()
-    info.changeLifeBy(-1)
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
-    mySprite.say("¡Ole! Ya tienes la segunda terminación", 5000)
-    mySprite.startEffect(effects.smiles, 1000)
-    music.baDing.play()
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
-    mySprite.say("¡Tirado!", 5000)
-    mySprite.startEffect(effects.smiles, 1000)
-    music.baDing.play()
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
+    game.over(true, effects.hearts)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, location) {
     mySprite.say("Sobrevivir, pero supervivencia", 5000)
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
+    game.showLongText(game.askForString("¿Cúal es el primer día de la semana?", 5), DialogLayout.Top)
+    tiles.setTileAt(location, sprites.castle.rock2)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     mySprite.say("¡Fíjate mejor!", 5000)
@@ -205,61 +17,72 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingPine, function (sprite, location) {
     mySprite.say("Los arbustos no te detendrán", 5000)
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd4, function (sprite, location) {
+    mySprite.say("¡Cuidado!", 5000)
+    music.siren.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.purpleSwitchDown, function (sprite, location) {
+    mySprite.say("El chute que necesitaba", 5000)
+    mySprite.startEffect(effects.rings, 1000)
+    info.changeLifeBy(2)
+    music.powerUp.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
+    game.setDialogTextColor(8)
+    game.showLongText("Sábado, sabadete, camisa blanca y polvete.", DialogLayout.Full)
+})
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile7, function (sprite, location) {
     mySprite.say("Ya era hora. Ve echando leches hacia la puerta.", 5000)
     mySprite.startEffect(effects.smiles, 1000)
     music.baDing.play()
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
-    mySprite.say("La palanca. Es vida extra", 5000)
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
+    mySprite.say("¡Ole! Ya tienes la segunda terminación", 5000)
+    mySprite.startEffect(effects.smiles, 1000)
+    music.baDing.play()
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
-    game.over(true, effects.hearts)
-})
-scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd4, function (sprite, location) {
-    mySprite.say("¡Cuidado!", 5000)
-    music.siren.play()
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
+    mySprite.say("va a ser que no", 5000)
+    mySprite.startEffect(effects.fire, 1000)
+    music.wawawawaa.play()
+    info.changeLifeBy(-1)
 })
 let mySprite: Sprite = null
+game.splash("¿Te sabes ", "los días de la semana? ")
 mySprite = sprites.create(img`
-. . . . . . . . . . . . 
-. . f f f f f f f f . . 
-. . f f f e e f f f . . 
-. . 1 1 1 1 1 1 1 1 . . 
-. . f e 1 1 1 1 e f . . 
-. f e e e e e e e e f . 
-. e e f e e e e f e e . 
-. e e f e e e e f e e . 
-. e e e e e e e e e e . 
-. . e e e a a e e e . . 
-. . . e e e e e e . . . 
-1 1 1 1 1 e e 1 1 1 1 1 
-1 . . 1 1 1 1 1 1 . . 1 
-1 e . e e e e e e . e 1 
-. . . 1 1 1 1 1 1 . . . 
-. . f 1 f . . f 1 f . . 
-`, SpriteKind.Player)
-mySprite.say("¡Vamo al lío!", 5000)
+    . . . . . . . . . . . . 
+    . . 5 5 5 5 5 5 5 5 . . 
+    . . 5 5 5 5 5 5 5 5 . . 
+    . . 4 4 4 4 4 4 4 4 . . 
+    . . 5 d 4 4 4 4 d 5 . . 
+    . 5 d d d d d d d d 5 . 
+    . d d 8 d d d d 8 d d . 
+    . d d 8 d d d d 8 d d . 
+    . d d d d d d d d d d . 
+    . . d d d 3 3 d d d . . 
+    . . . d d d d d d . . . 
+    1 1 1 1 1 d d 1 1 1 1 1 
+    1 . . 1 1 1 1 1 1 . . 1 
+    1 d . d d d d d d . d 1 
+    . . . 4 4 4 4 4 4 . . . 
+    . . 4 4 4 . . 4 4 4 . . 
+    `, SpriteKind.Player)
+mySprite.say("¡vamos allá!", 5000)
 controller.moveSprite(mySprite, 100, 100)
-tiles.setTilemap(tiles.createTilemap(
-            hex`17000c001002020f020202110101010101010128010123012a010104222c04010101040110020f021101172f020322172b2a1402020302110115021b1c0401040104010101010401041a01010101041c041c15020501040115020f02171b0104010101100205010401220104010401180104010104010410020205010101041c1b011531300104011502021b010404010101011009050115021b011701040104010104010414020f020f051c010104010401040115021b15021b01041901042204010110020501150205010401040101040104100203010302021b01010104310101040104010103021b04191919191919041910021b2e100217010401010f01041d020202020202051c1402030203312d17030202030205`,
-            img`
-. . . . . . . . 2 2 2 2 2 2 2 2 2 2 . 2 . 2 2 
-. 2 . . 2 2 2 . 2 . . . . . 2 . . . . 2 . 2 2 
-. . . . . . 2 . . . 2 . 2 . 2 . 2 2 2 2 . 2 . 
-. 2 2 2 2 . 2 . 2 . . . 2 . 2 . . . . 2 . 2 . 
-2 2 2 . . . 2 . 2 . 2 2 2 . 2 2 2 . 2 2 . 2 . 
-. . . . 2 2 2 . 2 2 2 . . . 2 . 2 . . . . 2 . 
-. 2 2 2 2 . . 2 2 . . . 2 . 2 . 2 . 2 2 . 2 . 
-. . . . . . . 2 2 . 2 . 2 . 2 . . . 2 . . 2 . 
-2 2 . . . 2 2 . . . 2 . . . 2 . 2 . 2 2 . 2 . 
-. . . 2 . . . . 2 2 2 . 2 2 2 . 2 . 2 2 . . . 
-. 2 2 2 2 2 2 . 2 . . . . . . . 2 . 2 2 2 2 . 
-. . . . . . . . 2 . . . . . 2 . . . . . . . . 
-`,
-            [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.floorLight1,sprites.dungeon.floorDark3,sprites.dungeon.stairEast,sprites.dungeon.stairLarge,sprites.dungeon.stairNorth,sprites.dungeon.greenSwitchDown,sprites.dungeon.doorClosedNorth,sprites.builtin.forestTiles16,sprites.builtin.crowd5,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.builtin.crowd9,sprites.dungeon.hazardSpike,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.saplingOak,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.castle.rock1,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,sprites.builtin.crowd1,sprites.builtin.crowd0,sprites.dungeon.buttonTeal,sprites.dungeon.hazardWater,sprites.dungeon.hazardHole,sprites.dungeon.chestClosed,sprites.dungeon.purpleSwitchDown,myTiles.tile1,sprites.dungeon.stairLadder,sprites.builtin.forestTiles0,sprites.dungeon.chestOpen,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.builtin.crowd4,sprites.builtin.crowd2,sprites.builtin.crowd6,sprites.builtin.crowd7,sprites.dungeon.stairWest],
-            TileScale.Sixteen
-        ))
+tiles.setTilemap(tiles.createTilemap(hex`17000c0008020207020202090101010101010115010114011601010413180401010104010802070209010c1b0203130c17160a0202030209010b0210110401040104010101010401040f01010101041104110b02050104010b0207020c1001040101010802050104011301040104010d0104010104010408020205010101041110010b1d1c0104010b02021001040401010101080605010b0210010c0104010401010401040a02070207051101010401040104010b02100b021001040e010413040101080205010b02050104010401010401040802030103020210010101041d01010401040101030210040e0e0e0e0e0e040e0802101a08020c010401010701041202020202020205110a020302031d190c030202030205`, img`
+    . . . . . . . . 2 2 2 2 2 2 2 2 2 2 . 2 . 2 2 
+    . 2 . . 2 2 2 . 2 . . . . . 2 . . . . 2 . 2 2 
+    . . . . . . 2 . . . 2 . 2 . 2 . 2 2 2 2 . 2 . 
+    . 2 2 2 2 . 2 . 2 . . . 2 . 2 . . . . 2 . 2 . 
+    2 2 2 . . . 2 . 2 . 2 2 2 . 2 2 2 . 2 2 . 2 . 
+    . . . . 2 2 2 . 2 2 2 . . . 2 . 2 . . . . 2 . 
+    . 2 2 2 2 . . 2 2 . . . 2 . 2 . 2 . 2 2 . 2 . 
+    . . . . . . . 2 2 . 2 . 2 . 2 . . . 2 . . 2 . 
+    2 2 . . . 2 2 . . . 2 . . . 2 . 2 . 2 2 . 2 . 
+    . . . 2 . . . . 2 2 2 . 2 2 2 . 2 . 2 2 . . . 
+    . 2 2 2 2 2 2 . 2 . . . . . . . 2 . 2 2 2 2 . 
+    . . . . . . . . 2 . . . . . 2 . . . . . . . . 
+    `, [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.stairLarge,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.castle.rock1,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,sprites.builtin.crowd1,sprites.dungeon.chestClosed,sprites.dungeon.purpleSwitchDown,sprites.dungeon.collectibleRedCrystal,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,sprites.builtin.crowd4], TileScale.Sixteen))
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(180)
