@@ -72,6 +72,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
+            info.changeScoreBy(1)
             game.showLongText("La respuesta es <<viernes>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
@@ -100,6 +101,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
+            info.changeScoreBy(1)
             game.showLongText("La respuesta es <<jueves>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
@@ -141,6 +143,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile9, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
+            info.changeScoreBy(1)
             game.showLongText("La respuesta es <<martes>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
@@ -185,6 +188,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
+            info.changeScoreBy(1)
             game.showLongText("La respuesta es <<domingo>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
@@ -213,6 +217,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile10, function (sprite, locatio
                 game.over(false)
                 music.wawawawaa.play()
             }
+            info.changeScoreBy(1)
             game.showLongText("La respuesta es <<miércoles>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
@@ -255,6 +260,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
+            info.changeScoreBy(1)
             game.showLongText("La respuesta es <<sábado>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
@@ -283,6 +289,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite,
                 game.over(false)
                 music.wawawawaa.play()
             }
+            info.changeScoreBy(1)
             game.showLongText("La respuesta es <<lunes>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
@@ -353,6 +360,6 @@ tiles.setTilemap(tiles.createTilemap(hex`17000c0008020207020702091b17171a1a0e0e1
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(180)
-info.setLife(7)
+info.setLife(3)
 info.setScore(0)
 music.playMelody("C5 G B A F A C5 B ", 110)
