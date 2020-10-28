@@ -1,5 +1,97 @@
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
-    game.over(true, effects.hearts)
+    if (info.score() == 8) {
+        game.setDialogFrame(img`
+            8888.....88....888....88.88....888....888...8888
+            867788..8768..86768..8678768..86768..8678.887768
+            8767768.8777886767688777877788676768877788677678
+            877677686767787767787767676778776778776786776778
+            .8778766677678776778767767767877677876778678778.
+            .8677866867668676768667686766867676866766687768.
+            ..86668688676886868867688867688686886768686668..
+            .888666888888888888888888888888888888888866688..
+            87777688666666666666666666666666666666668886688.
+            867677686666666666666666666666666666666688677778
+            .87766786666666666666666666666666666666686776768
+            ..877668666666666666666666666666666666668766778.
+            ..88888866666666666666666666666666666666866778..
+            .867768866666666666666666666666666666666888888..
+            86777768666666666666666666666666666666668867768.
+            876666886666666666666666666666666666666686777768
+            867777686666666666666666666666666666666688666678
+            .86776886666666666666666666666666666666686777768
+            ..888888666666666666666666666666666666668867768.
+            ..87768866666666666666666666666666666666888888..
+            .877667866666666666666666666666666666666866778..
+            86767768666666666666666666666666666666668766778.
+            877776886666666666666666666666666666666686776768
+            .88668886666666666666666666666666666666688677778
+            87777688666666666666666666666666666666668886688.
+            867677686666666666666666666666666666666688677778
+            .87766786666666666666666666666666666666686776768
+            ..877668666666666666666666666666666666668766778.
+            ..88888866666666666666666666666666666666866778..
+            .867768866666666666666666666666666666666888888..
+            86777768666666666666666666666666666666668867768.
+            876666886666666666666666666666666666666686777768
+            867777686666666666666666666666666666666688666678
+            .86776886666666666666666666666666666666686777768
+            ..888888666666666666666666666666666666668867768.
+            ..87766866666666666666666666666666666666888888..
+            .877667866666666666666666666666666666666866778..
+            86767768666666666666666666666666666666668766778.
+            877776886666666666666666666666666666666686776768
+            .88668886666666666666666666666666666666688677778
+            ..886668888888888888888888888888888888888666888.
+            ..86668686768868688676888676886868867688686668..
+            .8677866676686767686676867668676768667686687768.
+            .8778768776787767787677677678776778767766678778.
+            877677687677877677877676767787767787767686776778
+            8767768877788676768877787778867676887778.8677678
+            867788.8768..86768..8678768..86768..8678..887768
+            8888...888....888....88.88....888....88.....8888
+            `)
+        game.showLongText("Ya puedes pasar", DialogLayout.Bottom)
+        tiles.setWallAt(location, false)
+        game.over(true, effects.smiles)
+    } else {
+        game.setDialogFrame(img`
+            ...cc......................cc....
+            ..c55c..bbbb...bbbbb......c55c...
+            .cb55bcbdddbbbbbdddbbbbbbcb55bc..
+            b555555bbdddb111bdddb11db555555b.
+            bb5555bbdbdb11111bdb1111bb5555bb.
+            cb5555bcddd11111ddd11111cb5555bc.
+            .c5bb5c1111d111d111d111ddc5bb5c..
+            .cbbbbc111111111111111111cbbbbc..
+            ..b11111111111111111111111d111bb.
+            ..b111111111111111111111111d1bdb.
+            ..bb11111111111111111111111dbddb.
+            .bbdb1d11111111111111111111ddddb.
+            .bdddd11111111111111111111d1bdbb.
+            .bddbd11111111111111111111111bb..
+            .bdb1d111111111111111111111111b..
+            .bb111d11111111111111111111111b..
+            ..b11111111111111111111111d111bb.
+            ..b111111111111111111111111d1bdb.
+            ..bb11111111111111111111111dbddb.
+            .bbdb1d11111111111111111111ddddb.
+            .bdddd11111111111111111111d1bdbb.
+            .bddbd11111111111111111111111bb..
+            .bdbb1111111111111111111111111b..
+            .bbbd1111111111111111111111111b..
+            ..bcc111111111111111111111dccdb..
+            ..c55c111d111d111d111d1111c55cb..
+            .cb55bcdd11111ddd11111dddcb55bc..
+            b555555b11111bdb11111bdbb555555b.
+            bb5555bbb111bdddb111bdddbb5555bb.
+            cb5555bcdbbbbbdddbbbbbddcb5555bc.
+            .c5bb5c.bb...bbbbb...bbbbc5bb5c..
+            .cbbbbc..................cbbbbc..
+            .................................
+            `)
+        game.showLongText("Responde todas las preguntas y podrás pasar", DialogLayout.Bottom)
+        tiles.setWallAt(location, true)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, location) {
     game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
@@ -12,7 +104,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     if (game.askForString("¿Cúal es el quinto día de la semana?", 7) == "viernes") {
         tiles.setTileAt(location, sprites.castle.rock2)
-        info.changeLifeBy(1)
+        info.changeScoreBy(1)
         music.baDing.play()
     } else {
         info.changeLifeBy(-1)
@@ -23,7 +115,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
         }
         if (game.askForString("¿Cúal es el quinto día de la semana?", 7) == "viernes") {
             tiles.setTileAt(location, sprites.castle.rock2)
-            info.changeLifeBy(1)
+            info.changeScoreBy(1)
             music.baDing.play()
         } else {
             info.changeLifeBy(-1)
@@ -32,7 +124,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
-            game.splash("La respuesta es <<viernes>>")
+            game.showLongText("La respuesta es <<viernes>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
     }
@@ -40,7 +132,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     if (game.askForString("¿Cúal es el cuarto día de la semana?", 6) == "jueves") {
         tiles.setTileAt(location, sprites.castle.rock2)
-        info.changeLifeBy(1)
+        info.changeScoreBy(1)
         music.baDing.play()
     } else {
         info.changeLifeBy(-1)
@@ -51,7 +143,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location
         }
         if (game.askForString("¿Cúal es el cuarto día de la semana?", 6) == "lunes") {
             tiles.setTileAt(location, sprites.castle.rock2)
-            info.changeLifeBy(1)
+            info.changeScoreBy(1)
             music.baDing.play()
         } else {
             info.changeLifeBy(-1)
@@ -60,7 +152,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
-            game.splash("La respuesta es <<jueves>>")
+            game.showLongText("La respuesta es <<jueves>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
     }
@@ -86,12 +178,11 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.tilePath5, function (sprit
     if (controller.A.isPressed()) {
         tiles.setTileAt(location, sprites.dungeon.doorClosedSouth)
     }
-    mySprite.say("", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile9, function (sprite, location) {
     if (game.askForString("¿Cúal es el segundo día de la semana?", 6) == "martes") {
         tiles.setTileAt(location, sprites.castle.rock2)
-        info.changeLifeBy(1)
+        info.changeScoreBy(1)
         music.baDing.play()
     } else {
         info.changeLifeBy(-1)
@@ -102,7 +193,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile9, function (sprite, location
         }
         if (game.askForString("¿Cúal es el segundo día de la semana?", 6) == "martes") {
             tiles.setTileAt(location, sprites.castle.rock2)
-            info.changeLifeBy(1)
+            info.changeScoreBy(1)
             music.baDing.play()
         } else {
             info.changeLifeBy(-1)
@@ -110,8 +201,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile9, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
-            music.powerDown.play()
-            game.splash("La respuesta es <<martes>>")
+            game.showLongText("La respuesta es <<martes>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
     }
@@ -122,20 +212,20 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile11, function (sprite, locatio
     if (controller.A.isPressed()) {
         tiles.setTileAt(location, sprites.vehicle.roadTurn3)
     }
-    mySprite.say("", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileGrass2, function (sprite, location) {
     game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
-    game.showLongText("Los lunes ni las gallinas ponen", DialogLayout.Top)
+    game.showLongText("Los lunes ni las gallinas ponen. Además has ganado una vida por plantar un árbol", DialogLayout.Top)
     if (controller.A.isPressed()) {
         tiles.setTileAt(location, sprites.castle.treeSmallPine)
+        info.changeScoreBy(1)
+        music.powerUp.play()
     }
-    mySprite.say("", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
     if (game.askForString("¿Cúal es el último día de la semana?", 8) == "domingo") {
         tiles.setTileAt(location, sprites.castle.rock2)
-        info.changeLifeBy(1)
+        info.changeScoreBy(1)
         music.baDing.play()
     } else {
         info.changeLifeBy(-1)
@@ -146,7 +236,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location
         }
         if (game.askForString("¿Cúal es el último día de la semana?", 8) == "domingo") {
             tiles.setTileAt(location, sprites.castle.rock2)
-            info.changeLifeBy(1)
+            info.changeScoreBy(1)
             music.baDing.play()
         } else {
             info.changeLifeBy(-1)
@@ -155,7 +245,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
-            game.splash("La respuesta es <<domingo>>")
+            game.showLongText("La respuesta es <<domingo>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
     }
@@ -163,7 +253,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile10, function (sprite, location) {
     if (game.askForString("¿Cúal es el tercer día de la semana?", 9) == "miercoles") {
         tiles.setTileAt(location, sprites.castle.rock2)
-        info.changeLifeBy(1)
+        info.changeScoreBy(1)
         music.baDing.play()
     } else {
         info.changeLifeBy(-1)
@@ -174,7 +264,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile10, function (sprite, locatio
         }
         if (game.askForString("¿Cúal es el tercer día de la semana?", 9) == "miercoles") {
             tiles.setTileAt(location, sprites.castle.rock2)
-            info.changeLifeBy(1)
+            info.changeScoreBy(1)
             music.baDing.play()
         } else {
             info.changeLifeBy(-1)
@@ -183,7 +273,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile10, function (sprite, locatio
                 game.over(false)
                 music.wawawawaa.play()
             }
-            game.splash("La respuesta es <<miércoles>>")
+            game.showLongText("La respuesta es <<miércoles>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
     }
@@ -198,7 +288,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileGrass1, function (spri
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
     if (game.askForString("¿Cúal es el penúltimo día de la semana?", 6) == "sabado") {
         tiles.setTileAt(location, sprites.castle.rock2)
-        info.changeLifeBy(1)
+        info.changeScoreBy(1)
         music.baDing.play()
     } else {
         info.changeLifeBy(-1)
@@ -209,7 +299,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location
         }
         if (game.askForString("¿Cúal es el penúltimo día de la semana?", 6) == "sabado") {
             tiles.setTileAt(location, sprites.castle.rock2)
-            info.changeLifeBy(1)
+            info.changeScoreBy(1)
             music.baDing.play()
         } else {
             info.changeLifeBy(-1)
@@ -218,7 +308,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location
                 game.over(false)
                 music.wawawawaa.play()
             }
-            game.splash("La respuesta es <<sábado>>")
+            game.showLongText("La respuesta es <<sábado>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
     }
@@ -226,7 +316,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location
 scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite, location) {
     if (game.askForString("¿Cúal es el primer día de la semana?", 5) == "lunes") {
         tiles.setTileAt(location, sprites.castle.rock2)
-        info.changeLifeBy(1)
+        info.changeScoreBy(1)
         music.baDing.play()
     } else {
         info.changeLifeBy(-1)
@@ -237,7 +327,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite,
         }
         if (game.askForString("¿Cúal es el primer día de la semana?", 5) == "lunes") {
             tiles.setTileAt(location, sprites.castle.rock2)
-            info.changeLifeBy(1)
+            info.changeScoreBy(1)
             music.baDing.play()
         } else {
             info.changeLifeBy(-1)
@@ -246,7 +336,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite,
                 game.over(false)
                 music.wawawawaa.play()
             }
-            game.splash("La respuesta es <<lunes>>")
+            game.showLongText("La respuesta es <<lunes>>", DialogLayout.Bottom)
             tiles.setTileAt(location, sprites.castle.rock2)
         }
     }
@@ -317,5 +407,6 @@ tiles.setTilemap(tiles.createTilemap(hex`17000c0008020207020202091c18181b1b0e0e1
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(180)
-info.setLife(3)
+info.setLife(7)
+info.setScore(0)
 music.playMelody("C5 G B A F A C5 B ", 66)
