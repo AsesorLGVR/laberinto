@@ -2,24 +2,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location
     game.over(true, effects.hearts)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, location) {
-    game.setDialogCursor(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
+    game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
     game.showLongText("Quien ríe en viernes llora en domingo", DialogLayout.Full)
     if (controller.A.isPressed()) {
         tiles.setTileAt(location, myTiles.tile7)
@@ -90,24 +73,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingPine, function (spr
     }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, location) {
-    game.setDialogCursor(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
+    game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
     game.showLongText("Hoy es domingo de Ramos. Una fiesta católica", DialogLayout.Full)
     if (controller.A.isPressed()) {
         tiles.setTileAt(location, sprites.dungeon.stairNorth)
@@ -286,29 +252,31 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite,
     }
 })
 let mySprite: Sprite = null
-game.setDialogCursor(img`
-    ...bbbbbbbbbb...
-    ..b1111111111b..
-    .b111111111111b.
-    .b111111111111b.
-    .bddccccccccddb.
-    .bdc66666666cdb.
-    .bdc61d66666cdb.
-    .bdc6d666666cdb.
-    .bdc66666666cdb.
-    .bdc66666666cdb.
-    .bdc66666666cdb.
-    .bddccccccccddb.
-    .cbbbbbbbbbbbbc.
-    fccccccccccccccf
-    fbbbbbbbbbbbbbbf
-    fbcdddddddddddbf
-    fbcbbbbbbbbbbcbf
-    fbcbbbbbbbbbbcbf
-    fbccccccccccccbf
-    fbbbbbbbbbbbbbbf
-    fbffffffffffffbf
-    ffffffffffffffff
+game.setDialogFrame(img`
+    .....cccccccccccccc.....
+    ...cbd111111111111dbc...
+    ..cd1111111111111111dc..
+    .cd111111111111111111dc.
+    .b11111111111111111111b.
+    cd11111111111111111111dc
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    c1111111111111111111111c
+    cd11111111111111111111dc
+    .b11111111111111111111b.
+    .cd111111111111111111dc.
+    ..cd1111111111111111dc..
+    ..b11d111111111111dbc...
+    .b11bcccccccccccccc.....
+    ccccc...................
     `)
 game.setDialogTextColor(8)
 game.showLongText("Hola soy Freud, soy ingeniero de caminos, estoy aprendiendo español y mi objetivo de hoy es aprender los días de la semana. ¿es fácil?", DialogLayout.Full)
