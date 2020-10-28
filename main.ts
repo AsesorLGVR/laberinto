@@ -42,6 +42,13 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location
         tiles.setWallAt(location, true)
     }
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorLight0, function (sprite, location) {
+    game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
+    game.showLongText("Hoy es domingo de Ramos. Una fiesta católica", DialogLayout.Full)
+    if (controller.A.isPressed()) {
+        tiles.setTileAt(location, sprites.dungeon.stairNorth)
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     if (game.askForString("¿Cúal es el quinto día de la semana?", 7) == "viernes") {
         tiles.setTileAt(location, sprites.castle.rock2)
@@ -105,13 +112,6 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingPine, function (spr
         tiles.setTileAt(location, sprites.dungeon.hazardWater)
     }
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, location) {
-    game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
-    game.showLongText("Hoy es domingo de Ramos. Una fiesta católica", DialogLayout.Full)
-    if (controller.A.isPressed()) {
-        tiles.setTileAt(location, sprites.dungeon.stairNorth)
-    }
-})
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.tilePath5, function (sprite, location) {
     game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
     game.showLongText("Pareces el día jueves, siempre estás en medio.", DialogLayout.Full)
@@ -155,11 +155,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile11, function (sprite, locatio
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock1, function (sprite, location) {
     game.setDialogCursor(sprites.dialog.smallDialogLeftThin)
-    game.showLongText("Los lunes ni las gallinas ponen. Además has ganado una vida por plantar un árbol", DialogLayout.Top)
+    game.showLongText("Ganaste una vida extra por plantar un árbol", DialogLayout.Top)
     if (controller.A.isPressed()) {
-        info.changeScoreBy(1)
         music.powerUp.play()
         tiles.setTileAt(location, sprites.castle.treeSmallPine)
+        info.changeLifeBy(1)
     }
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
@@ -315,41 +315,41 @@ game.setDialogFrame(img`
     ccccc...................
     `)
 game.setDialogTextColor(8)
-game.showLongText("Hola soy Freud, soy ingeniero de caminos, estoy aprendiendo español y mi objetivo de hoy es aprender los días de la semana. ¿es fácil?", DialogLayout.Full)
+game.showLongText("Ferdinand es un ingeniero de caminos que ha venido a trabajar a España. Sabe poco español y de camino al trabajo decide aprenderse los días de la semana. ¿Lo conseguirá antes de que acabe el tiempo?", DialogLayout.Full)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . 
-    . . 5 5 5 5 5 5 5 5 . . 
-    . . 5 5 5 5 5 5 5 5 . . 
-    . . 4 4 4 4 4 4 4 4 . . 
-    . . 5 d 4 4 4 4 d 5 . . 
-    . 5 d d d d d d d d 5 . 
+    . . f f f f f f f f . . 
+    . . f f f f f f f f . . 
+    . . f f f f f f f f . . 
+    . . f d f f f f d f . . 
+    . f d d d d d d d d f . 
     . d d 8 d d d d 8 d d . 
     . d d 8 d d d d 8 d d . 
     . d d d d d d d d d d . 
     . . d d d 3 3 d d d . . 
     . . . d d d d d d . . . 
-    1 1 1 1 1 d d 1 1 1 1 1 
-    1 . . 1 1 1 1 1 1 . . 1 
-    1 d . d d d d d d . d 1 
-    . . . 4 4 4 4 4 4 . . . 
-    . . 4 4 4 . . 4 4 4 . . 
+    1 1 1 1 1 1 f 1 1 1 1 1 
+    1 . . 1 1 1 f 1 1 . . 1 
+    1 d . f f f f f f . d 1 
+    . . . f f f f f f . . . 
+    . . f f f . . f f f . . 
     `, SpriteKind.Player)
 mySprite.say("¡vamos allá!", 5000)
 controller.moveSprite(mySprite, 100, 100)
-tiles.setTilemap(tiles.createTilemap(hex`17000c0008020207020202091b17171a1a0e0e180e0e1e0e0f0e100418120401010e04180802070209011a140203181f18100a02020302090e0b020d0e04010401040e0e0e0e041b041d18181818040e040e0b02050104010b0207021a0d0e041a1a1a0802050e041b1801180104181918040e0e041b04080202050e0e0e040e19170b18161804180b02020d1704040e0e0e0e080605010b020d1b0e0104180401010418040a0207020705170e18040e041b04010b020d19020d1804151b0418041b1b0802050e0b020501040e040101041804080203190302020d1b181804181b1b041b04010103020d041a1a1a1a1a1a041a08020d130802171b0418181c0e0419020202020202050e0a020302031a110c030202030205`, img`
-    . . . . . . . . . 2 2 2 . 2 2 2 2 2 2 2 . 2 2 
-    . 2 . . 2 2 2 . 2 . . . . . 2 . . . . 2 . 2 . 
-    . . . . . . 2 . . . 2 . 2 . 2 . 2 2 2 2 . 2 . 
-    . 2 2 2 2 . 2 . 2 . . . 2 . 2 . . . . 2 . 2 . 
+tiles.setTilemap(tiles.createTilemap(hex`17000c0008020207020702091b17171a1a0e0e180e0e1e0e0f0e100418120418040e04180802070209010b140203181f18100b020703020d0e04180d0e04010401040e0e0e0e041b041d18041818040e040e0b02050104010b0207021a0d0e041a1a030802050e041b1801180104181918040e0e041b040802070517170e040e19170b18161804180b02020d1704040e040e17080605010b020d1b0e0104180401010418040b020d0b0705170e18040e041b04010b020d19020d1804151b0418041b1b0802050e0b020501040e040101041804080203020302020d1b181804181b1b041b04010103020d041a1a1a1a1a1a041a02020d130802051b0418181c0e04190202020202190a0202020302031a110c050a02030205`, img`
+    . . . . . . . . . 2 . 2 2 2 2 2 2 2 . 2 . 2 2 
+    . 2 . . 2 . 2 . 2 . . . . . 2 . . . . 2 . 2 . 
+    . . . . . . 2 . 2 . 2 . 2 . 2 . 2 2 2 2 . 2 . 
+    . 2 . 2 2 . 2 . 2 . . . 2 . 2 . . . . 2 . 2 . 
     2 2 2 . . . 2 . 2 . 2 2 2 . 2 2 2 . 2 2 . 2 . 
     . . . . 2 2 2 . 2 2 2 . . . 2 . 2 . . . . 2 . 
-    . 2 2 2 2 . . 2 2 . . . 2 . 2 . 2 . 2 2 . 2 . 
-    . . . . . . . 2 2 . 2 . 2 . 2 . . . 2 . . 2 . 
-    . 2 . . . 2 2 . . . 2 . . . 2 . 2 . 2 2 . 2 . 
-    . . . 2 . . . . 2 2 2 . 2 2 2 . 2 . 2 2 . . . 
+    . 2 . 2 2 . . . 2 . . . 2 . 2 . 2 . 2 2 . 2 . 
+    . . . 2 . . 2 2 2 . 2 . 2 . 2 . . . 2 . . 2 . 
+    . 2 . 2 . 2 2 . . . 2 . . . 2 . 2 . 2 2 . 2 . 
+    . . . . . . . . 2 2 2 . 2 2 2 . 2 . 2 2 . . . 
     . 2 2 . 2 2 2 . 2 . . . . . . . 2 . 2 2 . 2 . 
-    . . . . . . . . 2 . . . . . 2 . . . . . . . . 
-    `, [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.stairLarge,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.shrub,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,myTiles.tile2,myTiles.tile5,myTiles.tile8,myTiles.transparency16,myTiles.tile9,myTiles.tile4,myTiles.tile6,myTiles.tile10,myTiles.tile1,myTiles.tile7,myTiles.tile11,myTiles.tile12,sprites.castle.tileGrass1,sprites.castle.rock1,sprites.castle.tilePath5,sprites.builtin.forestTiles0,sprites.castle.tileGrass3], TileScale.Sixteen))
+    . . . . . . 2 . . . . . . . 2 . . . 2 . . . . 
+    `, [myTiles.tile0,sprites.builtin.brick,sprites.vehicle.roadHorizontal,sprites.vehicle.roadIntersection1,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.dungeon.stairLarge,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn1,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.castle.shrub,sprites.vehicle.roadIntersection4,sprites.castle.saplingPine,myTiles.tile2,myTiles.tile5,myTiles.tile8,myTiles.transparency16,myTiles.tile9,myTiles.tile4,myTiles.tile6,myTiles.tile10,myTiles.tile1,myTiles.tile7,myTiles.tile11,myTiles.tile12,sprites.castle.tileGrass1,sprites.castle.rock1,sprites.castle.tilePath5,sprites.builtin.forestTiles0,sprites.dungeon.floorLight0], TileScale.Sixteen))
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(180)
