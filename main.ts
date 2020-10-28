@@ -94,8 +94,10 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile9, function (sprite, location
     }
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile11, function (sprite, location) {
-    game.setDialogTextColor(8)
-    game.showLongText("Sábado, sabadete, camisa blanca y polvete.", DialogLayout.Full)
+    game.showLongText("hola", DialogLayout.Top)
+    if (controller.A.isPressed()) {
+        tiles.setTileAt(location, sprites.castle.shrub)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile12, function (sprite, location) {
     mySprite.say("De lunes a martes de mierda te hartes", 5000)
@@ -164,7 +166,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileGrass1, function (spri
     game.showLongText("Los jueves no te ahueves", DialogLayout.Full)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
-    mySprite.say("¡Cuidado!", 5000)
+    mySprite.say("Me encantan los fines de semana", 5000)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile5, function (sprite, location) {
     if (game.askForString("¿Cúal es el penúltimo día de la semana?", 6) == "sabado") {
