@@ -38,7 +38,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location
             .cbbbbc..................cbbbbc..
             .................................
             `)
-        game.showLongText("Responde todas las preguntas y podrás pasar", DialogLayout.Bottom)
+        game.showLongText("Responde todas las preguntas y podrás pasar ", DialogLayout.Bottom)
         tiles.setWallAt(location, true)
     }
 })
